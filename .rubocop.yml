@@ -43,6 +43,30 @@ Naming/PredicateName:
 RSpec/DescribedClass:
   Enabled: false
 
+# Examples should be informative and explicit. While longer examples are
+# generally hard to read, the value should be adjusted as reasonable for a
+# project.
+RSpec/ExampleLength:
+  Max: 10
+
+# Examples should focus on testing one thing, but that does not necessarily
+# translate into a single expectation. For instance, testing validations in
+# a Rails model should assert (1) the model is invalid, (2) the model has
+# validation errors, and (3) these errors not only include the target field
+# but also the target error message. Another example would be testing
+# side-effects are contained.
+#
+# Similarly, not limiting the number of expectations in an example invites
+# colaborators (and consequently reviewers) to forget the rule of testing one
+# thing only, or to simply ignore it due over the "simplicity" and comfort of
+# checking for everything in a single test.
+#
+# Therefore, this cop should remain enabled, but its value should be adjusted 
+# as reasonable for the project.
+#
+RSpec/MultipleExpectations:
+  Max: 3
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
