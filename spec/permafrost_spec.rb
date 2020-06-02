@@ -30,4 +30,15 @@ RSpec.describe Permafrost do
       end.to raise_error StandardError
     end
   end
+
+  describe ".merge(env)" do
+    it "merges the provided environment into the current one" do
+      env = { Faker::Lorem.word => Faker::Lorem.word }
+
+      Permafrost.merge(env) do
+        expect(ENV.to_h).not_to eq env
+        expect(ENV.to_h).to include env
+      end
+    end
+  end
 end
