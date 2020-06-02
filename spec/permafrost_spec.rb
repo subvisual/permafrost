@@ -21,5 +21,13 @@ RSpec.describe Permafrost do
         expect(ENV.to_h).to eq env
       end
     end
+
+    it "passes exceptions from the block" do
+      expect do
+        Permafrost.freeze do
+          raise StandardError
+        end
+      end.to raise_error StandardError
+    end
   end
 end
