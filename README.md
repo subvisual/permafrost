@@ -12,7 +12,7 @@ Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "permafrost"
+gem "permafrost", "~> 1.0"
 ```
 
 And then execute:

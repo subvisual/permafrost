@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog], and this project adheres to
 Unreleased
 ----------
 
+_Coming soon_
+
+
+v1.0.0 - 2020-06-03
+-------------------
+
 - Add `Permafrost.merge` to complement the environment in a limited scope;
 - Add `Permafrost.freeze` to set the environment in a limited scope;
 
